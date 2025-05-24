@@ -1,0 +1,10 @@
+{
+    "data" : [
+        {
+            "username": "User",
+            "password": "User123",
+            "first_name": "Kyla",
+            "last_name": "Flores"
+        }
+    ]
+}
