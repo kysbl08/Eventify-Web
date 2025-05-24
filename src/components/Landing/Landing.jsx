@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="bg-black/20 w-full h-full">
           <div className="container flex flex-col items-center justify-end text-center min-h-[500px] py-12 space-y-6">
             <p className="text-4xl text-[#FEFAE0] md:text-6xl font-normal tracking-wider poppins text- text-white">
-              Your Events, Your Way, kita mo na ba to gelo
+              Your Events, Your Way, julieebie
             </p>
 
             <p className="text-lg text-[#FEFAE0] poppins text- text-white max-w-2xl">
