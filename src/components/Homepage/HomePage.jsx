@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import imgheader from "../../img/headerimg.png";
 import LoginModal from "../userprofile/LoginModal";
-import SignUp from "../userprofile/SIgnUp";
 import imgArts from "../../img/artspic.png"
 import imgBusiness from "../../img/businesspic.png"
 import imgEduc from "../../img/educ.png"
@@ -9,8 +8,14 @@ import imgEntertainment from "../../img/entertainment.png"
 import imgFamily from "../../img/family.png"
 import imgSpiritual from "../../img/spiritual.png"
 import imgLogo from "../../img/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+    document.title = "Eventify - Landing";
+    const [showLogin, setShowLogin] = useState(false);
+    const [isDis, setIsDis] = useState(true);
+    const navigate = useNavigate();
+
   return (
     <>
       <main
@@ -36,7 +41,7 @@ const Hero = () => {
               {/* Select Category */}
               <div className="relative w-full">
                 <select className="appearance-none w-full p-3 pr-10 rounded-md bg-white dark:bg-gray-800 text-black poppins text-normal dark:text-white shadow">
-                  <option value="" disabled selected>Select Category</option>
+                  <option disabled selected value="" >Select Category</option>
                   <option value="arts">Arts & Culture</option>
                   <option value="business">Business</option>
                   <option value="education">Education</option>
@@ -53,7 +58,7 @@ const Hero = () => {
               {/* Select Location */}
               <div className="relative w-full">
                 <select className="appearance-none w-full p-3 pr-10 rounded-md bg-white dark:bg-gray-800 poppins text-normal text-black dark:text-white shadow">
-                  <option value="" disabled selected>Select Location</option>
+                  <option disabled selected value="" >Select Location</option>
                   <option value="arts">Arts & Culture</option>
                   <option value="business">Business</option>
                   <option value="education">Education</option>
@@ -68,7 +73,7 @@ const Hero = () => {
 
 
               {/* Filter by Category Button */}
-              <button className="p-3 rounded-md bg-[#A4B465] poppins text-normal text-[#FEFAE0] hover:bg-[#3D5300] transition-all">
+              <button onClick={() => setShowLogin(true)} className="p-3 rounded-md bg-[#A4B465] poppins text-normal text-[#FEFAE0] hover:bg-[#3D5300] transform transition-all duration-100 ">
                 Search
               </button>
             </div>
@@ -89,33 +94,32 @@ const Hero = () => {
             <div className="w-[63%] mx-auto">
               <div className="relative w-full">
                 <img src={imgArts} alt="" className="w-[400px] h-[270px] rounded-lg" />
-                <button className="absolute right-5 bottom-5 text-white italic text-sm hover:font-semibold transform transition-all duration-300 hover:scale-105 hover:translate-y-[-2px]">
+                <button onClick={() => navigate("/arts-events")} className="absolute right-5 bottom-5 text-white italic text-sm hover:font-semibold transform transition-all duration-300 hover:scale-105 hover:translate-y-[-2px]">
                   Explore
                 </button> 
               </div>
-              <button className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">ARTS & CULTURE</button>
+              <button onClick={() => navigate("/arts-events")} className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">ARTS & CULTURE</button>
             </div>
-
             {/* Second Card */}
             <div className="w-[63%] mx-auto">
               <div className="relative w-full">
                 <img src={imgBusiness} alt="" className="w-[400px] h-[270px] rounded-lg" />
-                <button className="absolute right-5 bottom-5 text-white italic text-sm hover:font-semibold transform transition-all duration-300 hover:scale-105 hover:translate-y-[-2px]">
+                <button onClick={() => navigate("/business")} className="absolute right-5 bottom-5 text-white italic text-sm hover:font-semibold transform transition-all duration-300 hover:scale-105 hover:translate-y-[-2px]">
                   Explore
                 </button>
               </div>
-              <button className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">BUSINESS</button>
+              <button onClick={() => navigate("/business")} className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">BUSINESS</button>
             </div>
 
             {/* Third Card */}
             <div className="w-[63%] mx-auto">
               <div className="relative w-full">
                 <img src={imgEduc} alt="" className="w-[400px] h-[270px] rounded-lg" />
-                <button className="absolute right-5 bottom-5 text-white italic text-sm hover:font-semibold transform transition-all duration-300 hover:scale-105 hover:translate-y-[-2px]">
+                <button onClick={() => navigate("/education")} className="absolute right-5 bottom-5 text-white italic text-sm hover:font-semibold transform transition-all duration-300 hover:scale-105 hover:translate-y-[-2px]">
                   Explore
                 </button> 
               </div>
-              <button className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">EDUCATION</button>
+              <button onClick={() => navigate("/education")}  className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">EDUCATION</button>
             </div>
           </div>
         </div>
@@ -126,33 +130,33 @@ const Hero = () => {
             <div className="w-[63%] mx-auto">
               <div className="relative w-full">
                 <img src={imgEntertainment} alt="" className="w-[400px] h-[270px] rounded-lg" />
-                <button className="absolute right-5 bottom-5 text-white italic text-sm hover:font-semibold transform transition-all duration-300 hover:scale-105 hover:translate-y-[-2px]">
+                <button onClick={() => navigate("/entertainment")} className="absolute right-5 bottom-5 text-white italic text-sm hover:font-semibold transform transition-all duration-300 hover:scale-105 hover:translate-y-[-2px]">
                   Explore
                 </button> 
               </div>
-              <button className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">ENTERTAINMENT</button>
+              <button onClick={() => navigate("/entertainment")} className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">ENTERTAINMENT</button>
             </div>
 
             {/* Fifth Card */}
             <div className="w-[63%] mx-auto">
               <div className="relative w-full">
                 <img src={imgFamily} alt="" className="w-[400px] h-[270px] rounded-lg" />
-                <button className="absolute right-5 bottom-5 text-white italic text-sm hover:font-semibold transform transition-all duration-300 hover:scale-105 hover:translate-y-[-2px]">
+                <button onClick={() => navigate("/family")} className="absolute right-5 bottom-5 text-white italic text-sm hover:font-semibold transform transition-all duration-300 hover:scale-105 hover:translate-y-[-2px]">
                   Explore
                 </button> 
               </div>
-              <button className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">FAMILY</button>
+              <button onClick={() => navigate("/family")} className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">FAMILY</button>
             </div>
 
-            {/* Sixth Card */}
+            {/* Spiritual & Religious Card */}
             <div className="w-[63%] mx-auto">
               <div className="relative w-full">
                 <img src={imgSpiritual} alt="" className="w-[400px] h-[270px] rounded-lg" />
-                <button className="absolute right-5 bottom-5 text-white italic text-sm hover:font-semibold transform transition-all duration-300 hover:scale-105 hover:translate-y-[-2px]">
+                <button onClick={() => navigate("/spiritualNreligious")} className="absolute right-5 bottom-5 text-white italic text-sm hover:font-semibold transform transition-all duration-300 hover:scale-105 hover:translate-y-[-2px]">
                   Explore
                 </button> 
               </div>
-              <button className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">SPIRITUAL & RELIGIOUS</button>
+              <button onClick={() => navigate("/spiritualNreligious")} className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">SPIRITUAL & RELIGIOUS</button>
             </div>
           </div>
         </div>

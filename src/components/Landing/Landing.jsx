@@ -8,13 +8,11 @@ import imgEntertainment from "../../img/entertainment.png"
 import imgFamily from "../../img/family.png"
 import imgSpiritual from "../../img/spiritual.png"
 import imgLogo from "../../img/logo.png";
-import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
     document.title = "Eventify - Landing";
     const [showLogin, setShowLogin] = useState(false);
     const [isDis, setIsDis] = useState(true);
-    const navigate = useNavigate();
 
   return (
     <>
@@ -94,12 +92,13 @@ const Hero = () => {
             <div className="w-[63%] mx-auto">
               <div className="relative w-full">
                 <img src={imgArts} alt="" className="w-[400px] h-[270px] rounded-lg" />
-                <button onClick={() => navigate("/arts-events")} className="absolute right-5 bottom-5 text-white italic text-sm hover:font-semibold transform transition-all duration-300 hover:scale-105 hover:translate-y-[-2px]">
+                <button onClick={() => setShowLogin(true)} className="absolute right-5 bottom-5 text-white italic text-sm hover:font-semibold transform transition-all duration-300 hover:scale-105 hover:translate-y-[-2px]">
                   Explore
                 </button> 
               </div>
-              <button onClick={() => navigate("/arts-events")} className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">ARTS & CULTURE</button>
+              <button onClick={() => setShowLogin(true)} className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">ARTS & CULTURE</button>
             </div>
+
             {/* Second Card */}
             <div className="w-[63%] mx-auto">
               <div className="relative w-full">
@@ -159,7 +158,7 @@ const Hero = () => {
               <button onClick={() => setShowLogin(true)} className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">SPIRITUAL & RELIGIOUS</button>
             </div>
           </div>
-          
+          {showLogin && <LoginModal onClose={() => setShowLogin(false)}/>}
         </div>
       </section>
         <div className="bg-[#3D5300]">

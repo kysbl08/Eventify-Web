@@ -2,37 +2,37 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import imgBack from "../../img/back.png";
 import imgheader from "../../img/headerimg.png";
-import imgMuseum1 from "../../img/museumTour1.png";
-import ArtFest from "../../img/artFest.png";
-import imgMuseum2 from "../../img/museumTour2.png";
+import codeFest from "../../img/codeFest.png";
+import fiedDay from "../../img/fieldDay.png";
+import openDiscussion from "../../img/openDiscussion.png";
 
-export default function ArtsNCulture() {
+export default function Education() {
   const navigate = useNavigate();
 
   const events = [
     {
-      image: imgMuseum1,
-      name: 'Event Name: Museum Tour',
+      image: codeFest,
+      name: 'Event Name: Code Fest',
       date: '📅 Fri, 14 July 2025',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
       creator: 'Kanade',
-      route: '/event-details/museum-tour-1',
+      route: '/event-details/code-fest',
     },
     {
-      image: ArtFest,
-      name: 'Event Name: Art Fest',
+      image: fiedDay,
+      name: 'Event Name: Field Day',
       date: '📅 Fri, 14 July 2025',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
       creator: 'Kanade',
-      route: '/event-details/art-fest',
+      route: '/event-details/field-day',
     },
     {
-      image: imgMuseum2,
-      name: 'Event Name: Museum Tour',
+      image: openDiscussion,
+      name: 'Event Name: Open Discussion',
       date: '📅 Fri, 14 July 2025',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
       creator: 'Kanade',
-      route: '/event-details/museum-tour-2',
+      route: '/event-details/open-discussion',
     },
   ];
 

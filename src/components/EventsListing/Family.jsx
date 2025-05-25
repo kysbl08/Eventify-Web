@@ -2,37 +2,37 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import imgBack from "../../img/back.png";
 import imgheader from "../../img/headerimg.png";
-import imgMuseum1 from "../../img/museumTour1.png";
-import ArtFest from "../../img/artFest.png";
-import imgMuseum2 from "../../img/museumTour2.png";
+import birthdayParty from "../../img/birthdayParty.png";
+import wedding from "../../img/wedding.png";
+import familyReunion from "../../img/familyReunion.png";
 
-export default function ArtsNCulture() {
+export default function Business() {
   const navigate = useNavigate();
 
   const events = [
     {
-      image: imgMuseum1,
-      name: 'Event Name: Museum Tour',
+      image: birthdayParty,
+      name: 'Event Name: Birthday Party',
       date: '📅 Fri, 14 July 2025',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
       creator: 'Kanade',
-      route: '/event-details/museum-tour-1',
+      route: '/event-details/birthday-party',
     },
     {
-      image: ArtFest,
-      name: 'Event Name: Art Fest',
+      image: wedding,
+      name: 'Event Name: Wedding',
       date: '📅 Fri, 14 July 2025',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
       creator: 'Kanade',
-      route: '/event-details/art-fest',
+      route: '/event-details/wedding',
     },
     {
-      image: imgMuseum2,
-      name: 'Event Name: Museum Tour',
+      image: familyReunion,
+      name: 'Event Name: Family Reunion',
       date: '📅 Fri, 14 July 2025',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
       creator: 'Kanade',
-      route: '/event-details/museum-tour-2',
+      route: '/event-details/family-reunion',
     },
   ];
 

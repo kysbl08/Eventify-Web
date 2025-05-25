@@ -2,37 +2,37 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import imgBack from "../../img/back.png";
 import imgheader from "../../img/headerimg.png";
-import imgMuseum1 from "../../img/museumTour1.png";
-import ArtFest from "../../img/artFest.png";
-import imgMuseum2 from "../../img/museumTour2.png";
+import idolPhilippines from "../../img/idolPhilippines.png";
+import fashionShow from "../../img/fashionShow.png";
+import arenaConcert from "../../img/arenaConcert.png";
 
-export default function ArtsNCulture() {
+export default function Business() {
   const navigate = useNavigate();
 
   const events = [
     {
-      image: imgMuseum1,
-      name: 'Event Name: Museum Tour',
+      image: idolPhilippines,
+      name: 'Event Name: Idol Philippines',
       date: '📅 Fri, 14 July 2025',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
       creator: 'Kanade',
-      route: '/event-details/museum-tour-1',
+      route: '/event-details/idol-philippines',
     },
     {
-      image: ArtFest,
-      name: 'Event Name: Art Fest',
+      image: fashionShow,
+      name: 'Event Name: Fashion Show',
       date: '📅 Fri, 14 July 2025',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
       creator: 'Kanade',
-      route: '/event-details/art-fest',
+      route: '/event-details/fashion-show',
     },
     {
-      image: imgMuseum2,
-      name: 'Event Name: Museum Tour',
+      image: arenaConcert,
+      name: 'Event Name: Arena Concert',
       date: '📅 Fri, 14 July 2025',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
       creator: 'Kanade',
-      route: '/event-details/museum-tour-2',
+      route: '/event-details/arena-concert',
     },
   ];
 

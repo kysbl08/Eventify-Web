@@ -2,37 +2,37 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import imgBack from "../../img/back.png";
 import imgheader from "../../img/headerimg.png";
-import imgMuseum1 from "../../img/museumTour1.png";
-import ArtFest from "../../img/artFest.png";
-import imgMuseum2 from "../../img/museumTour2.png";
+import worshipService from "../../img/worshipService.png";
+import charityEvent from "../../img/charityEvent.png";
+import prayerDevotion from "../../img/prayerDevotion.png";
 
-export default function ArtsNCulture() {
+export default function Business() {
   const navigate = useNavigate();
 
   const events = [
     {
-      image: imgMuseum1,
-      name: 'Event Name: Museum Tour',
+      image: worshipService,
+      name: 'Event Name: Worship Service',
       date: '📅 Fri, 14 July 2025',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
       creator: 'Kanade',
-      route: '/event-details/museum-tour-1',
+      route: '/event-details/worship-service',
     },
     {
-      image: ArtFest,
-      name: 'Event Name: Art Fest',
+      image: charityEvent,
+      name: 'Event Name: Charity Event',
       date: '📅 Fri, 14 July 2025',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
       creator: 'Kanade',
-      route: '/event-details/art-fest',
+      route: '/event-details/charity-event',
     },
     {
-      image: imgMuseum2,
-      name: 'Event Name: Museum Tour',
+      image: prayerDevotion,
+      name: 'Event Name: Prayer Devotion',
       date: '📅 Fri, 14 July 2025',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
       creator: 'Kanade',
-      route: '/event-details/museum-tour-2',
+      route: '/event-details/prayer-devotion',
     },
   ];
 
