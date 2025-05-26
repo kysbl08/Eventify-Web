@@ -10,7 +10,7 @@ import imgSpiritual from "../../img/spiritual.png"
 import imgLogo from "../../img/logo.png";
 import { useNavigate } from "react-router-dom";
 
-const Hero = () => {
+const Homepage = () => {
     document.title = "Eventify - Landing";
     const [showLogin, setShowLogin] = useState(false);
     const [isDis, setIsDis] = useState(true);
@@ -26,7 +26,7 @@ const Hero = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="bg-black/20 w-full h-full">
+        <div id="Categories" className="bg-black/20 w-full h-full">
           <div className="container flex flex-col items-center justify-end text-center min-h-[500px] py-12 space-y-6">
             <p className="text-4xl text-[#FEFAE0] md:text-6xl font-normal tracking-wider poppins text- text-white">
               Your Events, Your Way
@@ -178,4 +178,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Homepage;

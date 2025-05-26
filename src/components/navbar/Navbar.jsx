@@ -5,11 +5,11 @@ import { BiSolidMoon, BiSolidSun } from "react-icons/bi";
 import imgLogo from "../../img/logo.png";
 
 const navMenus = [
-  { name: "Home", link: "/#Landing" },
+  { name: "Home", link: "/home" },
   { name: "Events Listing", link: "/#about" },
   { name: "Event Details", link: "/#services" },
-  { name: "User Profile", link: "/login" },
-  { name: "Calendar", link: "/calendar" },
+  { name: "Dashboard", link: "/dashboard/user-profile" },
+  { name: "Calendar", link: "/calendar/calendar" },
 ];
 
 const Navbar = () => {

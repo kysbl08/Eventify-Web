@@ -9,6 +9,8 @@ import Education from './components/EventsListing/Education';
 import Entertainment from './components/EventsListing/Entertainment';
 import Family from './components/EventsListing/Family';
 import SpiritualNReligious from './components/EventsListing/SpiritualNReligious';
+import UserProfile from './components/dashboard/UserProfilee';
+import Calendar from './components/Calendar/Calendar';
 
 import MuseumTour1 from './components/EventDetails/MuseumTour1';
 import ArtFest from './components/EventDetails/ArtFest';
@@ -43,6 +45,8 @@ const App= () => {
               <Route path="/entertainment" element={<Entertainment />} />
               <Route path="/family" element={<Family />} />
               <Route path="/spiritualNreligious" element={<SpiritualNReligious />} />
+              <Route path="/dashboard/user-profile" element={<UserProfile />} />
+              <Route path="/calendar/calendar" element={<Calendar />} />
               <Route path="/event-details/museum-tour-1" element={<MuseumTour1 />} />
               <Route path="/event-details/art-fest" element={<ArtFest />} />
               <Route path="/event-details/museum-tour-2" element={<MuseumTour2 />} />
