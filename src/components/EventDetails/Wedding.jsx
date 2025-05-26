@@ -35,8 +35,8 @@ export default function MuseumTour1() {
             <li>📍 Pasig City, Metro Manila</li>
           </ul>
 
-          <span className="inline-block bg-[#1100FF] poppins text-white text-xs px-3 py-1 rounded-full mb-[80px]">
-            Business
+          <span className="inline-block bg-[#776900] poppins text-white text-xs px-3 py-1 rounded-full mb-[80px]">
+            Family
           </span>
 
           <p className="poppins text-sm text-gray-600 mb-6">
