@@ -14,7 +14,7 @@ const LoginModal = ({onClose, onLogin}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("https://6834806d464b499636031d7e.mockapi.io/users/users")
+    fetch("https://6834806d464b499636031d7e.mockapi.io/eventify/users")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Network response was not ok");
