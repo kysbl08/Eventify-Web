@@ -13,36 +13,36 @@ const LoginModal = ({onClose, onLogin}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
-    fetch("/users.json")
-  .then((res) => {
-    if (!res.ok) {
-      throw new Error("Network response was not ok");
-    }
-    return res.json(); // throws error if not valid JSON
-  })
-  .then((data) => {
-    const user = data.data.find((u) => u.username === username);
-    if (!user) {
-      alert("Username does not exist");
-      return;
-    }
 
-    if (user.password !== password) {
-      alert("Incorrect Password");
-      return;
-    }
+    fetch("https://6834806d464b499636031d7e.mockapi.io/users/users")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        const user = data.find((u) => u.username === username);
+        if (!user) {
+          alert("Username does not exist");
+          return;
+        }
 
-    localStorage.setItem("LoggedIn", JSON.stringify(user));
-    navigate("/home");
-    alert("Logged In Successfully!");
-  })
-  .catch((err) => {
-    console.error("Login error:", err.message);
-    alert("Login failed. Please check the console.");
-  });
-    
-  }
+        if (user.password !== password) {
+          alert("Incorrect Password");
+          return;
+        }
+
+        localStorage.setItem("LoggedIn", JSON.stringify(user));
+        navigate("/home");
+        alert("Logged In Successfully!");
+      })
+      .catch((err) => {
+        console.error("Login error:", err.message);
+        alert("Login failed. Please check the console.");
+      });
+  };
+
   
 
   return (
