@@ -96,13 +96,32 @@ const SIgnUp= ({onClose}) => {
                 <label className="text-sm text-[#3D5300] mb-1 block">Birthday</label>
                 <div className="flex gap-4">
                   <select className="bg-gray-300 px-4 py-2 rounded w-1/3 focus:outline-none">
-                    <option>Month</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
                   </select>
                   <select className="bg-gray-300 px-4 py-2 rounded w-1/3 focus:outline-none">
-                    <option>Day</option>
+                    <option disabled selected value="">Select Day</option>
+                      {Array.from({ length: 31 }, (_, i) => i + 1).map((day) => (
+                        <option key={day} value={day}>
+                          {day}
+                      </option>
+                      ))}
                   </select>
                   <select className="bg-gray-300 px-4 py-2 rounded w-1/3 focus:outline-none">
-                    <option>Year</option>
+                  <option disabled selected value="">Select Year</option>
+                    {Array.from({ length: 2013 - 1980 + 1 }, (_, i) => 1980 + i).map(year => (
+                      <option key={year} value={year}>{year}</option>
+                    ))}
                   </select>
                 </div>
               </div>

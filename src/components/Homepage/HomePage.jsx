@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import imgheader from "../../img/headerimg.png";
-import LoginModal from "../userprofile/LoginModal";
 import imgArts from "../../img/artspic.png"
 import imgBusiness from "../../img/businesspic.png"
 import imgEduc from "../../img/educ.png"
@@ -8,7 +7,38 @@ import imgEntertainment from "../../img/entertainment.png"
 import imgFamily from "../../img/family.png"
 import imgSpiritual from "../../img/spiritual.png"
 import imgLogo from "../../img/logo.png";
+import openDiscussion from "../../img/openDiscussion.png";
+import businessMeeting from "../../img/businessMeeting.png";
+import imgMuseum2 from "../../img/museumTour2.png";
+import wedding from "../../img/wedding.png";
 import { useNavigate } from "react-router-dom";
+
+  const events = [
+    {
+      name: "Event Name: Open Discussion",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec. Aliquam tristique nunc quis arcu scelerisque, quis vulputate ex placerat. Nunc a tincidunt odio, eleifend imperdiet justo.",
+      image: openDiscussion
+    },
+    {
+      name: "Event Name: Business Meeting",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec. Aliquam tristique nunc quis arcu scelerisque, quis vulputate ex placerat. Nunc a tincidunt odio, eleifend imperdiet justo.",
+      image: businessMeeting
+    },
+    {
+      name: "Event Name: Museum Tour",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec. Aliquam tristique nunc quis arcu scelerisque, quis vulputate ex placerat. Nunc a tincidunt odio, eleifend imperdiet justo.",
+      image: imgMuseum2
+    },
+    {
+      name: "Event Name: Wedding",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec. Aliquam tristique nunc quis arcu scelerisque, quis vulputate ex placerat. Nunc a tincidunt odio, eleifend imperdiet justo.",
+      image: wedding
+    },
+  ];
 
 const Homepage = () => {
     document.title = "Eventify - Landing";
@@ -83,7 +113,7 @@ const Homepage = () => {
 
       <section
         id="about"
-        className="bg-[#FEFAE0] dark:bg-slate-800 dark:t  `ext-white"
+        className="bg-[#f5fbe8]  dark:bg-slate-800 dark:t  `ext-white"
       >
         
         <div className="mx-auto w-[90%] h-[600px] px-20 py-20">
@@ -161,8 +191,34 @@ const Homepage = () => {
           </div>
         </div>
       </section>
+      <section className="bg-[#f5fbe8] py-16 px-4 text-center">
+        <h2 className="text-[35px] font-semibold poppins text-[#3D5300] mb-2">Sample Events</h2>
+        <p className="text-black poppins max-w-4xl mx-auto mb-20">
+          Nam scelerisque sapien a tellus tincidunt, aliquet porttitor massa
+          pharetra. In hac habitasse platea dictumst. Sed mattis sollicitudin
+          quam, ac pharetra leo fermentum vitae.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-[190px] gap-6 justify-items-center">
+          {events.map((event, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-md max-w-xs overflow-hidden"
+            >
+              <img
+                src={event.image}
+                alt={event.name}
+                className="h-60 w-full object-cover"
+              />
+              <div className="p-4 text-left">
+                <h3 className="font-semibold poppins text-[#3D5300] mb-4">{event.name}</h3>
+                <p className="text-sm poppins text-gray-600 mb-[50px]">{event.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
         <div className="bg-[#3D5300]">
-            
             <footer className="flex flex-row items-center mx-auto justify-center text-center w-[50%] h-30 py-6  dark:bg-slate-950 dark:text-white">
                 <div className="flex justify-start">
                     <img src={imgLogo} alt="" className=" bg-[#3D5300] w-50 h-20 mx-auto"/>
