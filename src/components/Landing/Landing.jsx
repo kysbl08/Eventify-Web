@@ -81,7 +81,7 @@ const Hero = () => {
 
       <section
         id="about"
-        className="bg-[#FEFAE0] dark:bg-slate-800 dark:t  `ext-white"
+        className="bg-[#f5fbe8] dark:bg-slate-800 dark:t  `ext-white"
       >
         
         <div className="mx-auto w-[90%] h-[600px] px-20 py-20">

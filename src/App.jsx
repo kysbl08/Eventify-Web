@@ -10,6 +10,7 @@ import Entertainment from './components/EventsListing/Entertainment';
 import Family from './components/EventsListing/Family';
 import SpiritualNReligious from './components/EventsListing/SpiritualNReligious';
 import UserProfile from './components/dashboard/UserProfilee';
+import EventsListing from './components/EventsListing/Events_Listing';
 import Calendar from './components/Calendar/Calendar';
 
 import MuseumTour1 from './components/EventDetails/MuseumTour1';
@@ -22,7 +23,7 @@ import CodeFest from './components/EventDetails/CodeFest';
 import FieldDay from './components/EventDetails/FieldDay';
 import OpenDiscussion from './components/EventDetails/OpenDiscussion';
 import IdolPhilippines from './components/EventDetails/IdolPhilippines';
-import FashionShow from './components/EventDetails/fashionShow';
+import FashionShow from './components/EventDetails/FashionShow';
 import ArenaConcert from './components/EventDetails/ArenaConcert';
 import BirthdayParty from './components/EventDetails/BirthdayParty';
 import Wedding from './components/EventDetails/Wedding';
@@ -46,6 +47,7 @@ const App= () => {
               <Route path="/family" element={<Family />} />
               <Route path="/spiritualNreligious" element={<SpiritualNReligious />} />
               <Route path="/dashboard/user-profile" element={<UserProfile />} />
+              <Route path="/events-listing/events_listing" element={<EventsListing />} />
               <Route path="/calendar/calendar" element={<Calendar />} />
               <Route path="/event-details/museum-tour-1" element={<MuseumTour1 />} />
               <Route path="/event-details/art-fest" element={<ArtFest />} />

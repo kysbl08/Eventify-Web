@@ -6,7 +6,7 @@ import imgLogo from "../../img/logo.png";
 
 const navMenus = [
   { name: "Home", link: "/home" },
-  { name: "Events Listing", link: "/#about" },
+  { name: "Events Listing", link: "/events-listing/events_listing" },
   { name: "Event Details", link: "/#services" },
   { name: "Dashboard", link: "/dashboard/user-profile" },
   { name: "Calendar", link: "/calendar/calendar" },
