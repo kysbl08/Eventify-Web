@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import filter from "../../img/filter.png"
 
 const EventList = () => {
   const navigate = useNavigate();
@@ -100,12 +101,12 @@ const EventList = () => {
   return (
     <div className="bg-gray-50 min-h-screen px-10 py-10 w-full">
       
-      <div className="flex justify-end my-2 mr-53 text-[24px]">
+      <div className="flex justify-end my-2  text-[24px] mr-40">
         <button
           onClick={() => setIsModalOpen(true)}
-          className="px-6 py-2 shadow-sm rounded-md transition w-40"
+          className="px-6 py-2 shadow-sm rounded-md transition w-60 h-20"
         >
-          Filters
+          <img src={filter} className="w-full" />
         </button>
       </div>
 
@@ -116,7 +117,7 @@ const EventList = () => {
           onClick={() => setIsModalOpen(false)}
         >
           <div
-            className="bg-white rounded-lg shadow-lg max-w-4xl w-full p-6 text-[24px]"
+            className="bg-white rounded-lg shadow-lg max-w-4xl w-full p-6 text-[28px]"
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-2xl font-semibold mb-4">Filter</h2>
@@ -214,7 +215,7 @@ const EventList = () => {
       )}
 
       {/* Events Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-20 justify-items-center my-[100px] px-30">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-20 justify-items-center my-[100px] px-40">
         {filteredResults.map((event) => (
           <div
             key={event.event_id}
