@@ -2,7 +2,7 @@ import React from 'react';
 import fashionShow from "../../img/fashionShow.png";
 import imgBack from "../../img/back.png";
 
-export default function MuseumTour1() {
+export default function FashionShow() {
   return (
     <div className="bg-green-50 min-h-screen flex flex-col items-center justify-center p-6 font-sans">
       {/* Main Content */}
