@@ -33,7 +33,9 @@ const LoginModal = ({onClose, onLogin}) => {
           return;
         }
 
-        localStorage.setItem("LoggedIn", JSON.stringify(user));
+        localStorage.setItem("loggedInUser", JSON.stringify(user));
+        window.dispatchEvent(new Event("userLoginStatusChanged")); // Notify other components
+
         navigate("/home");
         alert("Logged In Successfully!");
       })

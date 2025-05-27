@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import imgheader from "../../img/headerimg.png";
 import LoginModal from "../userprofile/LoginModal";
 import imgArts from "../../img/artspic.png"
@@ -13,6 +13,23 @@ const Hero = () => {
     document.title = "Eventify - Landing";
     const [showLogin, setShowLogin] = useState(false);
     const [isDis, setIsDis] = useState(true);
+    const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("loggedInUser"));
+
+    localStorage.setItem("loggedIn", "true");
+
+    useEffect(() => {
+      const updateLoginStatus = () => {
+        const loggedIn = !!localStorage.getItem("loggedInUser");
+        setIsLoggedIn(loggedIn);
+      };
+    
+      window.addEventListener("userLoginStatusChanged", updateLoginStatus);
+    
+      return () => {
+        window.removeEventListener("userLoginStatusChanged", updateLoginStatus);
+      };
+    }, []);
+    
 
   return (
     <>
@@ -158,7 +175,7 @@ const Hero = () => {
               <button onClick={() => setShowLogin(true)} className="mt-7 text-black font-semibold text-[#3D5300] poppins text-l text-left">SPIRITUAL & RELIGIOUS</button>
             </div>
           </div>
-          {showLogin && <LoginModal onClose={() => setShowLogin(false)}/>}
+          {showLogin && !isLoggedIn && <LoginModal onClose={() => setShowLogin(false)} />}
         </div>
       </section>
         <div className="bg-[#3D5300]">
