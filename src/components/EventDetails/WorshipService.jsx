@@ -36,7 +36,7 @@ export default function MuseumTour1() {
           </ul>
 
           <span className="inline-block bg-[#FF0586] poppins text-white text-xs px-3 py-1 rounded-full mb-[80px]">
-            Spiritual and religious
+            Spiritual & Religious
           </span>
 
           <p className="poppins text-sm text-gray-600 mb-6">
