@@ -31,7 +31,8 @@ import FamilyReunion from './components/EventDetails/FamilyReunion';
 import WorshipService from './components/EventDetails/WorshipService';
 import CharityEvent from './components/EventDetails/CharityEvent';
 import PrayerDevotion from './components/EventDetails/PrayerDevotion';
-
+import EventCategory from './components/EventsListing/EventCategory';
+import EventContent from './components/EventsListing/EventContent';
 
 const App= () => {
   return (
@@ -67,6 +68,9 @@ const App= () => {
               <Route path="/event-details/worship-service" element={<WorshipService />} />
               <Route path="/event-details/charity-event" element={<CharityEvent />} />
               <Route path="/event-details/prayer-devotion" element={<PrayerDevotion />} />
+              
+              <Route path="/category/:categoryId" element={<EventCategory />} />
+              <Route path="/event/:eventId" element={<EventContent />} />
           </Route>
       </Routes>
     </>
