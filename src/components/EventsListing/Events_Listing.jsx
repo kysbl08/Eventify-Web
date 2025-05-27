@@ -1,5 +1,5 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useEffect, useState} from "react";
+import {useNavigate } from 'react-router-dom';
 import imgBack from "../../img/back.png";
 import imgheader from "../../img/headerimg.png";
 import imgMuseum1 from "../../img/museumTour1.png";
@@ -8,9 +8,29 @@ import imgMuseum2 from "../../img/museumTour2.png";
 import grandOpening from "../../img/grandOpening.png";
 import businessConference from "../../img/businessConference.png";
 import businessMeeting from "../../img/businessMeeting.png";
+import codeFest from "../../img/codeFest.png";
+import fiedDay from "../../img/fieldDay.png";
+import openDiscussion from "../../img/openDiscussion.png";
+import idolPhilippines from "../../img/idolPhilippines.png";
+import fashionShow from "../../img/fashionShow.png";
+import arenaConcert from "../../img/arenaConcert.png";
+import birthdayParty from "../../img/birthdayParty.png";
+import wedding from "../../img/wedding.png";
+import familyReunion from "../../img/familyReunion.png";
+import worshipService from "../../img/worshipService.png";
+import charityEvent from "../../img/charityEvent.png";
+import prayerDevotion from "../../img/prayerDevotion.png";
 
 export default function Events_Listing() {
     const navigate = useNavigate();
+
+
+    useEffect(() => {
+        const isLoggedIn = localStorage.getItem("loggedIn");
+        if (!isLoggedIn) {
+          navigate("/login"); // or wherever your login page is
+        }
+      }, []);
 
     const events = [
         {
@@ -60,6 +80,102 @@ export default function Events_Listing() {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
             creator: 'Kanade',
             route: '/event-details/business-meeting',
+          },
+          {
+            image: codeFest,
+            name: 'Event Name: Code Fest',
+            date: '📅 Fri, 14 July 2025',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
+            creator: 'Kanade',
+            route: '/event-details/code-fest',
+          },
+          {
+            image: fiedDay,
+            name: 'Event Name: Field Day',
+            date: '📅 Fri, 14 July 2025',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
+            creator: 'Kanade',
+            route: '/event-details/field-day',
+          },
+          {
+            image: openDiscussion,
+            name: 'Event Name: Open Discussion',
+            date: '📅 Fri, 14 July 2025',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
+            creator: 'Kanade',
+            route: '/event-details/open-discussion',
+          },
+          {
+            image: idolPhilippines,
+            name: 'Event Name: Idol Philippines',
+            date: '📅 Fri, 14 July 2025',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
+            creator: 'Kanade',
+            route: '/event-details/idol-philippines',
+          },
+          {
+            image: fashionShow,
+            name: 'Event Name: Fashion Show',
+            date: '📅 Fri, 14 July 2025',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
+            creator: 'Kanade',
+            route: '/event-details/fashion-show',
+          },
+          {
+            image: arenaConcert,
+            name: 'Event Name: Arena Concert',
+            date: '📅 Fri, 14 July 2025',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
+            creator: 'Kanade',
+            route: '/event-details/arena-concert',
+          },
+          {
+            image: birthdayParty,
+            name: 'Event Name: Birthday Party',
+            date: '📅 Fri, 14 July 2025',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
+            creator: 'Kanade',
+            route: '/event-details/birthday-party',
+          },
+          {
+            image: wedding,
+            name: 'Event Name: Wedding',
+            date: '📅 Fri, 14 July 2025',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
+            creator: 'Kanade',
+            route: '/event-details/wedding',
+          },
+          {
+            image: familyReunion,
+            name: 'Event Name: Family Reunion',
+            date: '📅 Fri, 14 July 2025',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
+            creator: 'Kanade',
+            route: '/event-details/family-reunion',
+          },
+          {
+            image: worshipService,
+            name: 'Event Name: Worship Service',
+            date: '📅 Fri, 14 July 2025',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
+            creator: 'Kanade',
+            route: '/event-details/worship-service',
+          },
+          {
+            image: charityEvent,
+            name: 'Event Name: Charity Event',
+            date: '📅 Fri, 14 July 2025',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
+            creator: 'Kanade',
+            route: '/event-details/charity-event',
+          },
+          {
+            image: prayerDevotion,
+            name: 'Event Name: Prayer Devotion',
+            date: '📅 Fri, 14 July 2025',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo risus est, a pulvinar ipsum molestie nec.',
+            creator: 'Kanade',
+            route: '/event-details/prayer-devotion',
           },
       ];
 
@@ -117,47 +233,40 @@ export default function Events_Listing() {
               </div>
             </div>
           </main>
-          <section className="py-10 px-[150px] text-center">
-          <div className="flex justify-start mb-4">
-            <button
-              onClick={() => window.history.back()}
-              className="mb-[-100px] flex items-center space-x-2 text-green-900 hover:text-green-700 text-base"
-            >
-              <img src={imgBack} alt="Back Icon" className="w-5 h-5" />
-              <span>Back</span>
-            </button>
-          </div>
-            <div className="my-[100px] flex flex-wrap justify-center gap-[90px]">
-              {events.map((event, index) => (
+          <section className="py-10 px-[150px] bg-[#F6FFEA] text-center">
+
+            <div className="my-[100px] grid grid-cols-3 gap-[90px] justify-items-center">
+                {events.map((event, index) => (
                 <div
-                  key={index}
-                  onClick={() => navigate(event.route)}
-                  className="bg-white shadow-md rounded-md overflow-hidden w-80 "
+                    key={index}
+                    onClick={() => navigate(event.route)}
+                    className="bg-white shadow-md rounded-md overflow-hidden w-80 cursor-pointer"
                 >
-                  <img src={event.image} alt={event.name} className="h-48 w-full object-cover" />
-                  <div className="p-5 text-left">
+                    <img src={event.image} alt={event.name} className="h-48 w-full object-cover" />
+                    <div className="p-5 text-left">
                     <h3 className="font-semibold text-[#3D5300] poppins text-lg">{event.name}</h3>
                     <p className="pb-2 text-sm text-gray-500 mb-2">{event.date}</p>
                     <p className="pb-7 poppins text-sm font-light mb-2">{event.description}</p>
                     <div className="flex items-center justify-between">
-                      <p className="text-sm poppins text-gray-600 mb-2">
-                        Created by <br /><span className="text-[#A6C237] poppins font-bold">{event.creator}</span>
-                      </p>
-                      <button
+                        <p className="text-sm poppins text-gray-600 mb-2">
+                        Created by <br />
+                        <span className="text-[#A6C237] poppins font-bold">{event.creator}</span>
+                        </p>
+                        <button
                         onClick={(e) => {
-                          e.stopPropagation();
-                          navigate(event.route);
+                            e.stopPropagation();
+                            navigate(event.route);
                         }}
                         className="mt-2 px-4 py-1 poppins text-[14px] font-semibold border-2 border-[#3D5300] text-[#3D5300] rounded-[7px] hover:bg-[#3D5300] hover:text-white transition"
-                      >
+                        >
                         SEE EVENT
-                      </button>
+                        </button>
                     </div>
-                  </div>
+                    </div>
                 </div>
-              ))}
+                ))}
             </div>
-          </section>
+            </section>                    
         </div>
         
       );
